@@ -1,0 +1,160 @@
+\ProvidesPackage{lecturemath}[2015/09/01 LectureMath Package]
+
+\RequirePackage{amssymb,amsmath,amsthm}
+
+\DeclareMathOperator{\dif}{d}
+\DeclareMathOperator{\const}{const}
+\DeclareMathOperator{\con}{con}
+\DeclareMathOperator{\dil}{dil}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Var}{Var}
+
+\newcommand{\kv}[1]{\ensuremath{\overleftarrow{#1}}}
+
+% Скорочення
+\newcommand{\liml}{\ensuremath{\lim\limits}}
+\newcommand{\intl}{\ensuremath{\int\limits}}
+\newcommand{\suml}{\ensuremath{\sum\limits}}
+\newcommand{\prodl}{\ensuremath{\prod\limits}}
+\newcommand{\ifom}{\ensuremath{i=\overrightarrow{1,m}}}
+\newcommand{\ifon}{\ensuremath{i=\overrightarrow{1,n}}}
+\newcommand{\ifo}[1]{\ensuremath{i=\overrightarrow{1,#1}}}
+\newcommand{\kfo}[1]{\ensuremath{k=\overrightarrow{1,#1}}}
+\newcommand{\jfon}{\ensuremath{j=\overrightarrow{1,n}}}
+\newcommand{\jfom}{\ensuremath{j=\overrightarrow{1,m}}}
+\newcommand{\pfoq}{\ensuremath{p=\overrightarrow{1,q}}}
+\newcommand{\kfop}{\ensuremath{k=\overrightarrow{1,p}}}
+\newcommand{\pfrm}[2]{\ensuremath{p=\overrightarrow{#1,#2}}}
+\newcommand{\intmz}{\ensuremath{\intl_{-\infty}^0}}
+\newcommand{\intzi}{\ensuremath{\intl_0^\infty}}
+\newcommand{\sumszi}{\ensuremath{\suml_{s=0}^\infty}}
+\newcommand{\sumson}{\ensuremath{\suml_{s=1}^n}}
+\newcommand{\sumjzi}{\ensuremath{\suml_{j=0}^\infty}}
+\newcommand{\sumjon}{\ensuremath{\suml_{j=1}^n}}
+\newcommand{\sumizi}{\ensuremath{\suml_{i=0}^\infty}}
+\newcommand{\sumion}{\ensuremath{\suml_{i=1}^n}}
+\newcommand{\sumiom}{\ensuremath{\suml_{i=1}^m}}
+\newcommand{\bcupl}{\ensuremath{\bigcup\limits}}
+\newcommand{\bcapl}{\ensuremath{\bigcap\limits}}
+\newcommand{\Varl}{\ensuremath{\Var\limits}}
+\newcommand{\Vartl}{\ensuremath{\Var\limits^2}}
+
+% Теорія ймовірностей
+\newcommand{\mEt}[1]{\ensuremath{\mathbb{E}\left[#1\right]}}
+\newcommand{\mnEt}[2]{\ensuremath{\mathbb{E}_{#2}\left[#1\right]}}
+\newcommand{\mEvx}{\ensuremath{\mathbb{E}\left[\vx\right]}}
+\newcommand{\mEve}{\ensuremath{\mathbb{E}\left[\vec{e}\right]}}
+\newcommand{\mEx}{\ensuremath{\mathbb{E}\left[x\right]}}
+\newcommand{\mEe}{\ensuremath{\mathbb{E}\left[e\right]}}
+\newcommand{\mDt}[1]{\ensuremath{\mathbb{D}\left[#1\right]}}
+\newcommand{\mDx}[1]{\ensuremath{\mathbb{D}\left[x\right]}}
+
+% Скорочені позначення
+\newcommand{\dv}{\ensuremath{\dif v}}
+\newcommand{\dx}{\ensuremath{\dif x}}
+\newcommand{\dz}{\ensuremath{\dif z}}
+\newcommand{\drh}{\ensuremath{\dif \rho}}
+\newcommand{\dxi}{\ensuremath{\dif x_i}}
+\newcommand{\dy}{\ensuremath{\dif y}}
+\newcommand{\dt}{\ensuremath{\dif t}}
+\newcommand{\ds}{\ensuremath{\dif s}}
+\newcommand{\vf}{\ensuremath{\vec{f}}}
+\newcommand{\ve}{\ensuremath{\vec{e}}}
+\newcommand{\vb}{\ensuremath{\vec{b}}}
+\newcommand{\vm}{\ensuremath{\vec{m}}}
+\newcommand{\vh}{\ensuremath{\vec{h}}}
+\newcommand{\vxt}{\ensuremath{\vec{x}_t}}
+\newcommand{\vyt}{\ensuremath{\vec{y}_t}}
+\newcommand{\vht}{\ensuremath{\vec{h}_t}}
+\newcommand{\vfx}{\ensuremath{\vec{f}(x)}}
+\newcommand{\vx}{\ensuremath{\vec{x}}}
+\newcommand{\vc}{\ensuremath{\vec{c}}}
+\newcommand{\vz}{\ensuremath{\vec{z}}}
+\newcommand{\vu}{\ensuremath{\vec{u}}}
+\newcommand{\vd}{\ensuremath{\vec{d}}}
+\newcommand{\veta}{\ensuremath{\vec{\eta}}}
+\newcommand{\veps}{\ensuremath{\vec{\eps}}}
+\newcommand{\vxi}{\ensuremath{\vec{x_i}}}
+\newcommand{\vy}{\ensuremath{\vec{y}}}
+\newcommand{\vomg}{\ensuremath{\vec{\omega}}}
+\newcommand{\cj}{\ensuremath{c_j}}
+\newcommand{\cij}{\ensuremath{c_{ij}}}
+\newcommand{\xij}{\ensuremath{x_{ij}}}
+\newcommand{\heta}{\ensuremath{\hat{\eta}}}
+\newcommand{\pij}{\ensuremath{p_{ij}}}
+\newcommand{\bi}{\ensuremath{b_i}}
+\newcommand{\aij}{\ensuremath{a_{ij}}}
+\newcommand{\delij}{\ensuremath{\delta_{ij}}}
+\newcommand{\gamij}{\ensuremath{\gamma_{ij}}}
+\newcommand{\alij}{\ensuremath{\alpha_{ij}}}
+\newcommand{\hcj}{\ensuremath{\hat{c_j}}}
+\newcommand{\hbi}{\ensuremath{\hat{b_i}}}
+\newcommand{\hvfx}{\ensuremath{\hat{\vec{f}}(x)}}
+\newcommand{\haij}{\ensuremath{\hat{a_{ij}}}}
+\newcommand{\hveta}{\ensuremath{\widehat{\veta}}}
+\newcommand{\tveta}{\ensuremath{\widetilde{\veta}}}
+\newcommand{\kvp}{\ensuremath{\overleftarrow{p}}}
+\newcommand{\xj}{\ensuremath{x_j}}
+\newcommand{\mP}{\ensuremath{\mathbb{P}}}
+\newcommand{\mN}{\ensuremath{\mathbb{N}}}
+\newcommand{\mR}{\ensuremath{\mathbb{R}}}
+\newcommand{\mZ}{\ensuremath{\mathbb{Z}}}
+\newcommand{\mX}{\ensuremath{\mathbb{X}}}
+\newcommand{\mC}{\ensuremath{\mathbb{C}}}
+\newcommand{\mI}{\ensuremath{\mathbb{I}}}
+\newcommand{\mQ}{\ensuremath{\mathbb{Q}}}
+\newcommand{\mL}{\ensuremath{\mathbb{L}}}
+\newcommand{\mD}{\ensuremath{\mathbb{D}}}
+\newcommand{\iF}{\ensuremath{\mathcal{F}}}
+\newcommand{\iB}{\ensuremath{\mathcal{B}}}
+\newcommand{\iD}{\ensuremath{\mathcal{D}}}
+\newcommand{\iPx}{\ensuremath{\mathcal{P}_x}}
+\newcommand{\iDx}{\ensuremath{\mathcal{D}_x}}
+\newcommand{\iDe}{\ensuremath{\mathcal{D}_e}}
+\newcommand{\nw}[1]{\ensuremath{w_{#1}}}
+\newcommand{\omg}{\ensuremath{\omega}}
+\newcommand{\Omg}{\ensuremath{\Omega}}
+\newcommand{\gam}{\ensuremath{\gamma}}
+\newcommand{\al}{\ensuremath{\alpha}}
+\newcommand{\eps}{\ensuremath{\epsilon}}
+\newcommand{\la}{\ensuremath{\lambda}}
+\newcommand{\del}{\ensuremath{\delta}}
+
+% Скорочені позначення з нумерацією
+\newcommand{\nomg}[1]{\ensuremath{\omega_{#1}}}
+
+% Оточення
+\newcommand{\cb}[1]{\ensuremath{\left(#1\right)}}
+\newcommand{\bb}[1]{\ensuremath{\left[#1\right]}}
+\newcommand{\bcb}[1]{\ensuremath{\left[#1\right)}}
+\newcommand{\set}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\mdl}[1]{\ensuremath{\left|#1\right|}}
+
+% Диференціали
+\newcommand{\cdcd}[2]{\ensuremath{\cfrac{\dif #1}{\dif #2}}}
+\newcommand{\dd}[2]{\ensuremath{\cfrac{\partial #1}{\partial #2}}}
+\newcommand{\dddd}[2]{\ensuremath{\cfrac{\partial^2 #1}{\partial #2^2}}}
+\newcommand{\dddtd}[3]{\ensuremath{\cfrac{\partial^2 #1}{\partial #2 \partial #3}}}
+
+% Структури на матрицях
+\newcommand{\asystem}[1]{\ensuremath{\left[\begin{matrix}#1\end{matrix}\right.}}
+\newcommand{\system}[1]{\ensuremath{\left\{\begin{matrix}#1\end{matrix}\right.}}
+\newcommand{\vect}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+
+% Нові оточення
+\newtheorem{exs}{Приклад}
+\newtheorem{teor}{Теорема}
+\newtheorem{tver}{Твердження}
+\newtheorem{tsk}{Завдання}
+\newtheorem{nasl}{Наслідок}
+\newtheorem{war}{Зауважен}
+
+% Операції з матрицями
+
+% Заглушки
+\newcommand{\hdeli}{\ensuremath{\widehat{deli}}}
+\newcommand{\mt}[1]{#1}
+\newcommand{\nr}[1]{#1}
+\newcommand{\dels}{dels}
+\newcommand{\md}{md}
